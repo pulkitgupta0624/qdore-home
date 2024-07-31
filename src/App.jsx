@@ -1,0 +1,46 @@
+import React from "react";
+import Home from "./pages/Home";
+import ContactUs from "./pages/ContactUs";
+import B2B from "./pages/B2B"
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import OurStory from "./pages/OurStory";
+import ShopAll from "./pages/ShopAll";
+import Furniture from "./pages/ProductList/Furniture";
+import Decor from "./pages/ProductList/Decor";
+import Serveware from "./pages/ProductList/Serveware";
+import PlantersAndVases from "./pages/ProductList/PlantersAndVases";
+import Mercury from "./pages/ProductList/Mercury";
+import Wooden from "./pages/ProductList/Wooden";
+import Videos from "./pages/Videos";
+import Auth from "./pages/Auth";
+import Products from "./pages/Products";
+import SideTable from "./pages/Furniture/SideTable.jsx"
+import SideTableProduct from "./pages/Furniture/SideTableProduct.jsx";
+
+const App = () => {
+
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/ourStory" element={<OurStory />} />
+        <Route path="/contactUs" element={<ContactUs />} />
+        <Route path="/b2b" element={<B2B />} />
+        <Route path="/shop" element={<ShopAll />} />
+        <Route path="/furniture" element={<Furniture />} />
+        <Route path="/decor" element={<Decor />} />
+        <Route path="/servewares" element={<Serveware />} />
+        <Route path="/planters&vases" element={<PlantersAndVases />} />
+        <Route path="/mercuryCollection" element={<Mercury />} />
+        <Route path="/woodenCollection" element={<Wooden />} />
+        <Route path="/videos" element={<Videos />} />
+        <Route path="/auth" element={<Auth />} />
+        <Route path="/products" element={<Products />} />
+        <Route path="/furniture/side-table" element={<SideTable/>}/>
+        <Route path="/furniture/side-table/:productId" element={<SideTableProduct />} />
+      </Routes>
+    </Router>
+  );
+};
+
+export default App;
